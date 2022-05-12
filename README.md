@@ -7,7 +7,7 @@ For example, it's useful for multiple `docker-compose` environments
 
 ## Installation
 ``` sh
-go install github.com/qonsth/enverify@latest
+go install github.com/qonsth/enverify@v0
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ Make `enverify-local.sh`, which can be useful for local verification and recreat
 recreate() {
   flag='.'
   until [[ $flag == 'y' || $flag == 'n' || $flag == '' ]]; do
-      printf "\x1B[93mRecreate %s file from example? y/n (default: n)\x1B[0m\n" "$1"
+      printf "\x1B[93mRecreate %s file by %s.example? y/n (default: n)\x1B[0m\n" "$1"
       read -n1 -s -r flag
   done
 
